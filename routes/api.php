@@ -20,6 +20,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::controller(UserController::class)->group(function () {
         Route::post('update-profile', 'updateProfile');
         Route::post('change-password', 'changePassword');
+        Route::delete('user/delete', 'deleteUser');
+        Route::post('user/restore', 'restoreUser');
+        Route::delete('user/force-delete', 'forceDeleteUser');
+        Route::get('users', 'userList');
+        Route::get('/user-stats','userStats'); 
+        Route::patch('user/status', 'updateStatus');      
     });
 
     Route::get('/user', function (Request $request) {
