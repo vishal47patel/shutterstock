@@ -158,4 +158,6 @@ class RegisterController extends BaseController
             return $this->sendError('Throwable Error', $errorDetail);
         }
     }
+
+    
 }
