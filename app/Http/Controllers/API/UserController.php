@@ -74,13 +74,21 @@ class UserController extends BaseController
 
             $validator = Validator::make($request->all(), [
                 'current_password' => 'required|string|min:6',
-                'new_password'     => 'required|string|min:6|max:20|confirmed', // expects new_password_confirmation
+                'new_password'     => [
+                    'required',
+                    'string',
+                    'min:8',
+                    'confirmed',
+                    'regex:/[A-Z]/',     // Uppercase
+                    'regex:/[0-9]/',     // Number
+                    'regex:/[@$!%*?&]/'  // Special character
+                ], // expects new_password_confirmation
             ]);
 
             if ($validator->fails()) {
                 return $this->sendError('Validation Error.', $validator->errors());
             }
-            
+
             // Check if current password matches
             if (!\Hash::check($request->current_password, $user->password)) {
                 return $this->sendError('Error', ['current_password' => 'Current password is incorrect.']);

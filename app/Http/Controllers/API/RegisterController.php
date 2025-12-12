@@ -23,7 +23,14 @@ class RegisterController extends BaseController
             $validator = Validator::make($request->all(), [
                 'name' => 'required|string|min:3|max:50|regex:/^[a-zA-Z\s]+$/',
                 'email' => 'required|email|max:100|unique:users,email',
-                'password' => 'required|min:6|max:20',
+                'password' => [
+                    'required',
+                    'string',
+                    'min:8',                     // Minimum 8 characters
+                    'regex:/[A-Z]/',             // At least one uppercase
+                    'regex:/[0-9]/',             // At least one number
+                    'regex:/[@$!%*?&]/'          // At least one special character
+                ],
                 'c_password' => 'required|same:password',
             ]);
 
@@ -127,7 +134,15 @@ class RegisterController extends BaseController
             $validator = Validator::make($request->all(), [
                 'email' => 'required|email|exists:users,email',
                 'token' => 'required',
-                'password' => 'required|min:6|max:20|confirmed',
+                'password' => [
+                    'required',
+                    'string',
+                    'min:8',                     // Minimum 8 characters
+                    'confirmed',                 // Requires password_confirmation
+                    'regex:/[A-Z]/',             // At least one uppercase
+                    'regex:/[0-9]/',             // At least one number
+                    'regex:/[@$!%*?&]/'          // At least one special character
+                ],
             ]);
 
             if ($validator->fails()) {
@@ -158,6 +173,4 @@ class RegisterController extends BaseController
             return $this->sendError('Throwable Error', $errorDetail);
         }
     }
-
-    
 }
