@@ -49,7 +49,7 @@ return [
     |                    "errorlog", "monolog", "custom", "stack"
     |
     */
-
+    /*
     'channels' => [
 
         'stack' => [
@@ -127,6 +127,13 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
-    ],
+    ], */
+
+    'channels' => [
+        'stack' => [
+            'driver' => 'stack',
+            'channels' => ['stderr'],
+        ],
+    ]
 
 ];
