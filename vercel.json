@@ -12,11 +12,12 @@
             "dest": "/api/index.php"
         }
     ],
+    /*
     "rewrites": [
         {
             "source": "/(.*)",
             "destination": "/api/lambda.php"
         }
-    ],
+    ],*/
     "buildCommand": "echo skip..."
 }
