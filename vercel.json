@@ -3,7 +3,7 @@
     "outputDirectory": "public",
     "functions": {
         "api/lambda.php":{
-            "runtime": "vercel-php@8.5.0"
+            "runtime": "vercel-php@letest"
         }
     },
     "rewrites": [{ "source": "/(.*)", "destination": "/api/lambda.php"}],
