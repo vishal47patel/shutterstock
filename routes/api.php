@@ -32,3 +32,9 @@ Route::middleware('auth:sanctum')->group(function () {
         return $request->user();
     });
 });
+Route::get('/health', function () {
+    return response()->json([
+        'status' => 'ok',
+        'time' => now()->toDateTimeString()
+    ]);
+});
