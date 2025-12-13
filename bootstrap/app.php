@@ -1,5 +1,7 @@
 <?php
-
+if (!is_dir('/tmp/views')) {
+    mkdir('/tmp/views', 0777, true);
+}
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
