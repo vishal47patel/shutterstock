@@ -32,7 +32,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/api/lambda.php"
         }
     ],
     "buildCommand": "echo skip..."
