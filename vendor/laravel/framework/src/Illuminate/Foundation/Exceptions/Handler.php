@@ -808,10 +808,9 @@ class Handler implements ExceptionHandlerContract
      */
     protected function shouldReturnJson($request, Throwable $e)
     {
-        return true;
-        // return $this->shouldRenderJsonWhenCallback
-        //     ? call_user_func($this->shouldRenderJsonWhenCallback, $request, $e)
-        //     : $request->expectsJson();
+        return $this->shouldRenderJsonWhenCallback
+            ? call_user_func($this->shouldRenderJsonWhenCallback, $request, $e)
+            : $request->expectsJson();
     }
 
     /**

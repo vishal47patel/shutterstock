@@ -1281,3 +1281,16 @@ Did you mean this?
 #38 D:\\wamp\\www\\shutterstock\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('D:\\\\wamp\\\\www\\\\shu...')
 #39 {main}
 "} 
+[2025-12-14 12:41:24] production.ERROR: Class "Laravel\Sanctum\Sanctum" not found {"exception":"[object] (Error(code: 0): Class \"Laravel\\Sanctum\\Sanctum\" not found at D:\\wamp\\www\\shutterstock\\config\\sanctum.php:21)
+[stacktrace]
+#0 D:\\wamp\\www\\shutterstock\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php(115): require()
+#1 D:\\wamp\\www\\shutterstock\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php(115): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->{closure:Illuminate\\Foundation\\Bootstrap\\LoadConfiguration::loadConfigurationFile():115}()
+#2 D:\\wamp\\www\\shutterstock\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php(96): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFile(Object(Illuminate\\Config\\Repository), 'sanctum', 'D:\\\\wamp\\\\www\\\\shu...', Array)
+#3 D:\\wamp\\www\\shutterstock\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php(55): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\\Foundation\\Application), Object(Illuminate\\Config\\Repository))
+#4 D:\\wamp\\www\\shutterstock\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(342): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 D:\\wamp\\www\\shutterstock\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(484): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 D:\\wamp\\www\\shutterstock\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(195): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 D:\\wamp\\www\\shutterstock\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 D:\\wamp\\www\\shutterstock\\artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#9 {main}
+"} 

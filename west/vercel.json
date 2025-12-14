@@ -2,38 +2,32 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.6.0"
-        }
+        "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
+    
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://shutterstock1.vercel.app",
-        "APP_KEY": "base64:iJllkQ97WRugEpAYQaJp1BuOYQxkmFce4wT+axllKSg=",
+        "APP_KEY": "base64:ny3c1c64xlnm48tL1XaBCyUnJTwYTL15jOZC09K0//g=",
+
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp",
-        "MAIL_MAILER": "smtp",
-        "MAIL_SCHEME": "null",
-        "MAIL_HOST": "smtp.gmail.com",
-        "MAIL_PORT": "587",
-        "MAIL_USERNAME": "vishal47patel1@gmail.com",
-        "MAIL_PASSWORD": "lioicsjnxrtgutzu",
-        "MAIL_ENCRYPTION": "tls",
-        "MAIL_FROM_ADDRESS": "vishal47patel1@gmail.com",
+
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
     },
+
     "routes": [
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
-    ],
+    ],    
     "buildCommand": "echo skip..."
 }
